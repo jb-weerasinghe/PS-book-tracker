@@ -31,7 +31,10 @@ use `ng add` instead of `ng install`
 - 3.1 install following packages
 - - `PS D:\GitRepo\jb-weerasinghe\PS-book-tracker> npm i ng-packagr --save-dev`
 - - `PS D:\GitRepo\jb-weerasinghe\PS-book-tracker> npm i tsickle --save-dev   `
-
+- 3.2 generate angular library package `lib-angular-rating`
+- - `PS D:\GitRepo\jb-weerasinghe\PS-book-tracker> ng generate library angular-rating`
+compare with PS-First-ng-packagr. in this case 2 files were added `ng-package.json ,package.json `
+- - angular.json, tsconfig.json are also modified. when search library from root project, it first check paths mentioned in tsconfig before check node-modules folder
 ## Special points
 - book container component vs book presentational component
 - -  container component :statefull and handle data retriveing
