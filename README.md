@@ -18,3 +18,9 @@ use `ng add` instead of `ng install`
 
 ## 1.6 add book list component and call it insde tabs
 
+## 1.7 add book edit /detail components
+
+## 1.8 MAIN STYLE SHEET add
+
+## 1.9 Add notfication service with  `/material/snack-bar`
+

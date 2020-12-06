@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { tap } from 'rxjs/operators';
+import { NotificationService } from '../../../core/services/notification.service';
 import { BookService } from '../../../core/services/book.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class BookFormComponent implements OnInit {
 
   constructor(
     private readonly bookService: BookService,
-    //private readonly notificationService: NotificationService,
+    private readonly notificationService: NotificationService,
     private readonly activatedRoute: ActivatedRoute,
     //private readonly loggingService: AngularConsoleLoggerService
   ) { }
@@ -38,14 +39,14 @@ export class BookFormComponent implements OnInit {
           tap(() => this.loggingService.info('Somebody was updating a book'))
         ) */
         .subscribe(
-          // () => this.notificationService.show('Book updated')
+           () => this.notificationService.show('Book updated')
         );
     } else {
       this.bookService
         .add(this.form.value)
         //.pipe(tap(() => this.loggingService.info('Somebody was adding a book')))
         .subscribe(
-          // () => this.notificationService.show('Book added')
+           () => this.notificationService.show('Book added')
         );
     }
   }
