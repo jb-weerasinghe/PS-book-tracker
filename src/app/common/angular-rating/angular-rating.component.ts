@@ -1,13 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-angular-rating',
-  template: `<ng-container *ngFor="let option of options">
-    <span  [ngClass]="{rated: option <= currentRating}" class="rating-wrapper">&#9733;</span>
+  template: `
+    <ng-container *ngFor="let option of options">
+      <span  [ngClass]="{rated: option <= currentRating}" 
+      class="rating-wrapper"
+      (click)="changeRating(option)"
+      >&#9733;</span>
     </ng-container>
     {{currentRating}}`,
- styles: [
-  `
+  styles: [
+    `
     .rated {
       color: orange;
     }
@@ -16,12 +20,14 @@ import { Component, Input, OnInit } from '@angular/core';
       cursor: pointer;
     }
   `,
-],  
+  ],
 })
 export class AngularRatingComponent implements OnInit {
 
   @Input() ratingCount: number = 0
   @Input() currentRating: number = 10
+
+  @Output() ratingChanged = new EventEmitter();
 
   options: number[] = [];
   constructor() { }
@@ -31,6 +37,12 @@ export class AngularRatingComponent implements OnInit {
     // increse every item by one
     // [1,2,3,4,...]
     this.options = Array.from({ length: this.ratingCount }, (v, k) => ++k);
+  }
+
+  public changeRating(rating: number) {
+    console.log(rating)
+    //this.currentRating = rating;
+    this.ratingChanged.emit(rating)
   }
 
 }

@@ -6,7 +6,10 @@
     </p>
 
     <p matLine>{{book.rating}} -
-      <app-angular-rating [ratingCount]="MAX_RATING" [currentRating]="book.rating"></app-angular-rating>
+      <app-angular-rating 
+      [ratingCount]="MAX_RATING" 
+      [currentRating]="book.rating" 
+      (ratingChanged)="changeRating($event,book)"></app-angular-rating>
     </p>
 
     <span class="fill-remaining-space"></span>
