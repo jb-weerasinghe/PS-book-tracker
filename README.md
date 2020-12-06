@@ -16,3 +16,5 @@ use `ng add` instead of `ng install`
 - **HttpClientModule** should be add to root module. 
 - Otherwise there will be **Dependency Injection** Error
 
+## 1.6 add book list component and call it insde tabs
+

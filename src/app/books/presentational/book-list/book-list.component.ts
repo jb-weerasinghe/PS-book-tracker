@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Book } from '../../../shared/models/book';
 
 @Component({
   selector: 'app-book-list',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-list.component.scss']
 })
 export class BookListComponent implements OnInit {
+  @Input() books: Book[] = [];
 
-  constructor() { }
+  @Output() bookChanged = new EventEmitter();
 
-  ngOnInit(): void {
+  options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  constructor(){}//public angularRatingService: AngularRatingService) {}
+
+  ngOnInit() {}
+
+  toggleBookRead(book: Book) {
+    book.read = !book.read;
+    this.bookChanged.emit(book);
   }
 
+  changeRating(rating: number, book: Book) {
+    book.rating = rating;
+    this.bookChanged.emit(book);
+  }
 }
