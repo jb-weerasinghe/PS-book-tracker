@@ -6,7 +6,7 @@
     </p>
 
     <p matLine>
-      {{book.rating}}
+      <app-angular-rating [ratingCount]="MAX_RATING"></app-angular-rating>
     </p>
 
     <span class="fill-remaining-space"></span>
@@ -14,7 +14,7 @@
     <a mat-raised-button [routerLink]="['/books/details', book.id]">
       Details
     </a>
-    
+
     <button mat-raised-button 
       *ngIf="!book.read" 
       color="primary" 

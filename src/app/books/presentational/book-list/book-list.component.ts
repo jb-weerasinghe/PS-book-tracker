@@ -7,15 +7,17 @@ import { Book } from '../../../shared/models/book';
   styleUrls: ['./book-list.component.scss']
 })
 export class BookListComponent implements OnInit {
+  MAX_RATING = 10;
+
   @Input() books: Book[] = [];
 
   @Output() bookChanged = new EventEmitter();
 
-  options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  //options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  constructor(){}//public angularRatingService: AngularRatingService) {}
+  constructor() { }//public angularRatingService: AngularRatingService) {}
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   toggleBookRead(book: Book) {
     book.read = !book.read;

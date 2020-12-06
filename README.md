@@ -24,3 +24,5 @@ use `ng add` instead of `ng install`
 
 ## 1.9 Add notfication service with  `/material/snack-bar`
 
+## 2.0 Add Rating Feature module
+

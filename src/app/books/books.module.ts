@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { AngularRatingModule } from '../common/angular-rating/angular-rating.module';
  
 import { SharedModule } from '../shared/shared.module';
 import { BooksRoutes } from './books.routing';
@@ -16,6 +17,7 @@ import { allPresentationalComponents } from './presentational';
     SharedModule,
     ReactiveFormsModule,
     FormsModule,
+    AngularRatingModule,
     RouterModule.forChild(BooksRoutes),
   ],
   declarations: [...allContainerComponents, ...allPresentationalComponents],
