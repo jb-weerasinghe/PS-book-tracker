@@ -26,3 +26,13 @@ use `ng add` instead of `ng install`
 
 ## 2.0 Add Rating Feature module
 ## 2.1 color star based on current rating value. pass input value `@Input() currentRating:`
+
+## 3.0 Create Angular library
+- 3.1 install following packages
+- - `PS D:\GitRepo\jb-weerasinghe\PS-book-tracker> npm i ng-packagr --save-dev`
+- - `PS D:\GitRepo\jb-weerasinghe\PS-book-tracker> npm i tsickle --save-dev   `
+
+## Special points
+- book container component vs book presentational component
+- -  container component :statefull and handle data retriveing
+- -  presentational component : stateless - use to display data and ignorant about data retrieve
