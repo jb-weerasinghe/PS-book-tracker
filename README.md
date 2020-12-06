@@ -1,9 +1,11 @@
-# PSBookTracker
-Material Design
-- https://app.pluralsight.com/library/courses/angular-material/table-of-contents
+# PSBookTracker -Create seperate angular class library
+Main Objective is to create seperate angular class library.
+- Styling Applications with Angular Material
+- - https://app.pluralsight.com/library/courses/angular-material/table-of-contents
+- Structuring Angular Applications with Angular Libraries
+- - Creating and Using Your First Angular Library
+- - https://app.pluralsight.com/library/courses/structuring-angular-applications-angular-libraries/table-of-contents
 
-https://app.pluralsight.com/library/courses/structuring-angular-applications-angular-libraries/table-of-contents
-- Creating and Using Your First Angular Library
 
 ## 1.0 Add Angular Matirial to project
 use `ng add` instead of `ng install`
