@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'PS-book-tracker';
+  title = 'Book tracker';
+
+  navItems: any[] = [
+    { name: 'Overview', route: 'books' },
+    { name: 'Add new book', route: 'books/create' },
+  ];
 }
