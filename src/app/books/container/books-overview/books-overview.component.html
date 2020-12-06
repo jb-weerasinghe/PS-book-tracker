@@ -1,1 +1,13 @@
-<p>books-overview works!</p>
+<mat-tab-group
+  dynamicHeight
+  [(selectedIndex)]="activeTabIndex"
+  (selectedIndexChange)="loadBooks()"
+>
+  <mat-tab label="to buy">
+ 
+  </mat-tab>
+
+  <mat-tab label="read already">
+ 
+  </mat-tab>
+</mat-tab-group>

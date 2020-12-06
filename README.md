@@ -12,4 +12,7 @@ use `ng add` instead of `ng install`
 -  each componenet should be imported seperately to reduse bundle size
 ## 1.2 add materail navigation to start page
 ## 1.3 add dummy book related component with child routing
+## 1.4 add bookservice and http service to read data from API.
+- **HttpClientModule** should be add to root module. 
+- Otherwise there will be **Dependency Injection** Error
 
