@@ -11,7 +11,11 @@
       [currentRating]="book.rating" 
       (ratingChanged)="changeRating($event,book)"></app-angular-rating>
     </p>
-
+    <lib-angular-rating
+    [ratingCount]="MAX_RATING" 
+    [currentRating]="book.rating" 
+    (ratingChanged)="changeRating($event,book)"
+    ></lib-angular-rating>
     <span class="fill-remaining-space"></span>
 
     <a mat-raised-button [routerLink]="['/books/details', book.id]">

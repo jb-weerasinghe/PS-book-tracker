@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LibAngularRatingComponent } from './lib-angular-rating.component';
+import { LibAngularRatingComponent } from './angular-rating.component';
 
 describe('LibAngularRatingComponent', () => {
   let component: LibAngularRatingComponent;

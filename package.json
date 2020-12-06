@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib-angular-rating":"ng build lib-angular-rating",
+    "build-watch:lib-angular-rating":"ng build lib-angular-rating --watch",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
