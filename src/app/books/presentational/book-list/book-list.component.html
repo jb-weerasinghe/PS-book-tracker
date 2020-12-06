@@ -5,8 +5,8 @@
       <span> {{ book.author }} - {{ book.genre }}</span>
     </p>
 
-    <p matLine>
-      <app-angular-rating [ratingCount]="MAX_RATING"></app-angular-rating>
+    <p matLine>{{book.rating}} -
+      <app-angular-rating [ratingCount]="MAX_RATING" [currentRating]="book.rating"></app-angular-rating>
     </p>
 
     <span class="fill-remaining-space"></span>

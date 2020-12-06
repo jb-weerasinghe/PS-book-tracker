@@ -2,11 +2,26 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-angular-rating',
-  template: `<span *ngFor="let option of options">&#9733;</span>`,
+  template: `<ng-container *ngFor="let option of options">
+    <span  [ngClass]="{rated: option <= currentRating}" class="rating-wrapper">&#9733;</span>
+    </ng-container>
+    {{currentRating}}`,
+ styles: [
+  `
+    .rated {
+      color: orange;
+    }
+
+    .rating-wrapper {
+      cursor: pointer;
+    }
+  `,
+],  
 })
 export class AngularRatingComponent implements OnInit {
 
   @Input() ratingCount: number = 0
+  @Input() currentRating: number = 10
 
   options: number[] = [];
   constructor() { }

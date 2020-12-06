@@ -31,6 +31,8 @@ export class BooksOverviewComponent implements OnInit {
 
   loadBooks() {
     this.getBooks(this.currentTabIsReadTab());
+    console.log(100,this.allReadbooks)
+    console.log(200,this.allUnreadbooks)
   }
 
   private getBooks(readAlready: boolean) {
