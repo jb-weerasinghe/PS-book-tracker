@@ -2,7 +2,7 @@
 Main Objective is to create seperate angular class library.
 - Styling Applications with Angular Material
 - - https://app.pluralsight.com/library/courses/angular-material/table-of-contents
-- Structuring Angular Applications with Angular Libraries
+- Structuring Angular Applications with Angular Libraries using **`ng-packagr`**
 - - Creating and Using Your First Angular Library
 - - https://app.pluralsight.com/library/courses/structuring-angular-applications-angular-libraries/table-of-contents
 
