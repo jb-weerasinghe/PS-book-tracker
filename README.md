@@ -1,4 +1,4 @@
-# PSBookTracker -Create seperate angular class library
+# PSBookTracker -Create seperate angular class library **ng-packagr**
 Main Objective is to create seperate angular class library.
 - Styling Applications with Angular Material
 - - https://app.pluralsight.com/library/courses/angular-material/table-of-contents
